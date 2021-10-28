@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+# footsketch 과제
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 프로젝트 구성
 
-## Available Scripts
+-   프로젝트 생성(CRA)
+-   템플릿 구조 설정
+-   각종 패키지 설치(styled-components, react-router-dom, axios 등)
 
-In the project directory, you can run:
+## Step 1
 
-### `npm start`
+-   RecipeListPage 생성
+-   컴포넌트 구성 : RecipeListPage(index,js), RecipeListBody(Body.js), ListContainer(ListContainer.js), ItemList(itemList.js), Header(header.js), Loading(loading.js)
+-   헤더 구현(추후 재사용을 위해 components 디렉토리에 저장)
+-   바디 구현을 위한 itemList 컴포넌트 제작(map 함수를 이용하여 컴포넌트 재사용)
+-   axios를 이용하여 음식 데이터 불러오기
+-   Picture 태그 공부하기
+-   데이터를 불러오는 동안 보일 로딩 컴포넌트 제작
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Step 2
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+-   RecipeDeatilPage 생성
+-   컴포넌트 구성 : RecipeDetailPage(index.js), RecipeDetailBody(Body.js), FoodDescription(description.js), FoodStatus(status.js), FoodIngredients(ingredients.js), FoodMaking(making.js), Loading(loading.js)
+-   음식 메인 이미지 삽입(화면 비율에 맞게 : object-fit 사용)
+-   음식 설명 및 음식 정보 구현
+-   재료 화면(div를 이용해 체크박스 구현, flex-wrap을 이용한 반응형 작업, 컴포넌트 재사용)
+-   id 값을 useLocation을 이용해 불러와 axios를 이용해 음식 상세 데이터 불러오기
+-   뒤로가기 버튼 클릭시 루트 페이지로 이동
 
-### `npm test`
+## Step 3
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+-   카테고리로 필터링 하기
+-   filter 함수를 이용하여 korean, japanese 배열 생성
+-   spread 문법을 사용하여 filteredList 데이터 생성(map 함수 사용을 위해 - 컴포넌트 재사용 및 데이터 추가 용이성 고려)
+-   view 데이터가 없어서 임의의 배열 생성 후 random()을 이용하여 무작위 값 사용
+-   카테고리로 나눈 데이터를 sort()와 ascending()을 이용하여 오름차순 정렬
+-   반응형 작업(rem, vw, %, media-query)
